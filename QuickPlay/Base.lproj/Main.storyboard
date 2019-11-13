@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,137 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuickPlay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="HqU-3s-F6n">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="6mK-qU-2vD">
+                                        <rect key="frame" x="20" y="80" width="374" height="692"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoClipCell" rowHeight="88" id="5G3-L2-jyd" customClass="VideoTableViewCell" customModule="QuickPlay" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="374" height="88"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5G3-L2-jyd" id="ntH-BA-pN6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="88"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Color_Bars" translatesAutoresizingMaskIntoConstraints="NO" id="D8P-uL-9up">
+                                                            <rect key="frame" x="20" y="9" width="72" height="66.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="72" id="GgI-nz-nPs"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70m-eu-5i9">
+                                                            <rect key="frame" x="112" y="33.5" width="47.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="D8P-uL-9up" secondAttribute="bottom" constant="1.5" id="0JV-s1-MRN"/>
+                                                        <constraint firstItem="70m-eu-5i9" firstAttribute="leading" secondItem="D8P-uL-9up" secondAttribute="trailing" constant="20" id="ADa-K9-O0h"/>
+                                                        <constraint firstItem="D8P-uL-9up" firstAttribute="top" secondItem="ntH-BA-pN6" secondAttribute="topMargin" constant="-2" id="Aex-uc-roZ"/>
+                                                        <constraint firstItem="D8P-uL-9up" firstAttribute="leading" secondItem="ntH-BA-pN6" secondAttribute="leadingMargin" id="KZa-Zn-BrG"/>
+                                                        <constraint firstItem="70m-eu-5i9" firstAttribute="centerY" secondItem="ntH-BA-pN6" secondAttribute="centerY" id="e0t-Eu-nKp"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="clipName" destination="70m-eu-5i9" id="YQD-Rp-Pmf"/>
+                                                    <outlet property="clipThumbnail" destination="D8P-uL-9up" id="nIL-lQ-UEF"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Clips:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vu-EB-ahG">
+                                        <rect key="frame" x="20" y="40" width="95.5" height="20"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3N3-BI-gBF">
+                                        <rect key="frame" x="20" y="802" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="IPS-D8-kqJ"/>
+                                            <constraint firstAttribute="width" constant="40" id="XgE-TF-fFL"/>
+                                        </constraints>
+                                        <state key="normal" image="Add_Butt"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWb-Hj-QPK">
+                                        <rect key="frame" x="75" y="802" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="iDC-dP-pt2"/>
+                                            <constraint firstAttribute="width" constant="40" id="oNd-yj-SVu"/>
+                                        </constraints>
+                                        <state key="normal" image="Add_Remote_Butt"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7Z-YK-sGx">
+                                        <rect key="frame" x="354" y="802" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9ZY-Nb-hub"/>
+                                            <constraint firstAttribute="width" constant="40" id="zsl-Mn-dyt"/>
+                                        </constraints>
+                                        <state key="normal" image="Play_Butt"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i4-1I-sfS">
+                                        <rect key="frame" x="299" y="802" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="m7K-4E-1Ux"/>
+                                            <constraint firstAttribute="height" constant="40" id="xY2-WF-FQm"/>
+                                        </constraints>
+                                        <state key="normal" image="Play_All_Butt"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syt-W7-QBm">
+                                        <rect key="frame" x="130" y="802" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="gKD-7C-ibU"/>
+                                            <constraint firstAttribute="height" constant="40" id="qEt-7u-SAW"/>
+                                        </constraints>
+                                        <state key="normal" image="Remove_Butt"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3N3-BI-gBF" secondAttribute="bottom" constant="54" id="3XI-At-xtq"/>
+                                    <constraint firstItem="6mK-qU-2vD" firstAttribute="top" secondItem="4Vu-EB-ahG" secondAttribute="bottom" constant="20" id="RXE-Cw-dnf"/>
+                                    <constraint firstItem="4Vu-EB-ahG" firstAttribute="top" secondItem="HqU-3s-F6n" secondAttribute="top" constant="40" id="Rsi-1o-vme"/>
+                                    <constraint firstItem="w7Z-YK-sGx" firstAttribute="leading" secondItem="2i4-1I-sfS" secondAttribute="trailing" constant="15" id="XZ7-eC-bk1"/>
+                                    <constraint firstItem="4Vu-EB-ahG" firstAttribute="leading" secondItem="HqU-3s-F6n" secondAttribute="leading" constant="20" id="c0z-JA-eRj"/>
+                                    <constraint firstAttribute="bottom" secondItem="2i4-1I-sfS" secondAttribute="bottom" constant="54" id="ewL-WC-GUu"/>
+                                    <constraint firstAttribute="bottom" secondItem="HWb-Hj-QPK" secondAttribute="bottom" constant="54" id="gi4-4o-oHg"/>
+                                    <constraint firstAttribute="bottom" secondItem="w7Z-YK-sGx" secondAttribute="bottom" constant="54" id="ndN-wd-nQe"/>
+                                    <constraint firstItem="syt-W7-QBm" firstAttribute="leading" secondItem="HWb-Hj-QPK" secondAttribute="trailing" constant="15" id="nku-70-8aP"/>
+                                    <constraint firstAttribute="trailing" secondItem="6mK-qU-2vD" secondAttribute="trailing" constant="20" id="qQc-vZ-qnD"/>
+                                    <constraint firstItem="6mK-qU-2vD" firstAttribute="leading" secondItem="HqU-3s-F6n" secondAttribute="leading" constant="20" id="rYc-Sh-2sM"/>
+                                    <constraint firstItem="HWb-Hj-QPK" firstAttribute="leading" secondItem="3N3-BI-gBF" secondAttribute="trailing" constant="15" id="vdl-cr-zAy"/>
+                                    <constraint firstAttribute="trailing" secondItem="w7Z-YK-sGx" secondAttribute="trailing" constant="20" id="wQI-0A-lyp"/>
+                                    <constraint firstItem="3N3-BI-gBF" firstAttribute="leading" secondItem="HqU-3s-F6n" secondAttribute="leading" constant="20" id="wuf-Jm-a8P"/>
+                                    <constraint firstItem="3N3-BI-gBF" firstAttribute="top" secondItem="6mK-qU-2vD" secondAttribute="bottom" constant="30" id="xWs-2A-Dsj"/>
+                                    <constraint firstAttribute="bottom" secondItem="syt-W7-QBm" secondAttribute="bottom" constant="54" id="za5-Tz-A92"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Add_Butt" width="80" height="80"/>
+        <image name="Add_Remote_Butt" width="80" height="80"/>
+        <image name="Color_Bars" width="72" height="72"/>
+        <image name="Play_All_Butt" width="80" height="80"/>
+        <image name="Play_Butt" width="80" height="80"/>
+        <image name="Remove_Butt" width="80" height="80"/>
+    </resources>
 </document>
